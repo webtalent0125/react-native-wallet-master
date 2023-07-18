@@ -1,0 +1,207 @@
+import { StyleSheet, Platform } from 'react-native';
+
+export const styles = StyleSheet.create({
+  background: {
+    flex: 1,
+    marginTop: -35,
+    zIndex: 11,
+    backgroundColor: 'white',
+    borderTopRightRadius: 32,
+    borderTopLeftRadius: 32,
+  },
+  container: {
+    flex: 1,
+    backgroundColor: 'white',
+  },
+  mainContent: {
+    flex: 1,
+    paddingHorizontal: 20,
+    paddingTop: 40,
+  },
+  sendForm: {
+    backgroundColor: 'white',
+    // padding: 15,
+    marginTop: 35,
+    marginBottom: 50,
+  },
+  formAmount: {
+    textAlign: 'center',
+    alignItems: 'center',
+    marginBottom: 15,
+  },
+  amountInputContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    marginBottom: 8,
+    // maxWidth: '70%',
+  },
+  amountInput: {
+    fontSize: 28,
+    lineHeight: 33,
+    fontWeight: '600',
+    textAlign: 'right',
+    maxWidth: '70%',
+    padding: 0,
+    height: 33,
+  },
+  amountInputText: {
+    flexDirection: 'row',
+    fontSize: 28,
+    lineHeight: 33,
+    fontWeight: '600',
+    textAlign: 'right',
+  },
+  amountMoney: {
+    fontSize: 12,
+    lineHeight: 18,
+    fontWeight: '400',
+    color: '#8FA2B7',
+    marginBottom: 2,
+  },
+  amountText: {
+    fontSize: 12,
+    lineHeight: 18,
+    fontWeight: '400',
+    color: '#121212',
+  },
+  formElement: {
+    marginBottom: 15,
+  },
+  formLabel: {
+    fontSize: 12,
+    fontWeight: '400',
+    lineHeight: 18,
+    marginBottom: 8,
+    color: '#8FA2B7',
+  },
+  textInput: {
+    flex: 1,
+    backgroundColor: '#F0F3FF',
+    borderRadius: 4,
+    paddingTop: Platform.OS === 'ios' ? 15 : 10,
+    paddingBottom: Platform.OS === 'ios' ? 15 : 10,
+    paddingHorizontal: 20,
+  },
+  formText: {
+    fontSize: 12,
+    lineHeight: 18,
+    color: '#011B21',
+    fontWeight: '400',
+    // marginVertical: 6,
+    marginBottom: 9,
+  },
+  formError: {
+    fontSize: 12,
+    color: '#FC3044',
+    fontWeight: '700',
+    marginTop: 5,
+  },
+  contentText: {
+    alignSelf: 'center',
+    width: '80%',
+    color: '#8FA2B7',
+    fontWeight: '400',
+    fontSize: 12,
+    lineHeight: 18,
+    textAlign: 'center',
+  },
+  sendButton: {
+    backgroundColor: '#013BFF',
+    paddingVertical: 12,
+    borderRadius: 100,
+    marginTop: 50,
+  },
+  buttonDisable: {
+    backgroundColor: '#D8D8D8',
+  },
+  buttonText: {
+    fontSize: 16,
+    color: 'white',
+    textAlign: 'center',
+  },
+  modalContainer: {
+    flex: 1,
+    backgroundColor: 'white',
+    padding: 20,
+    paddingTop: Platform.OS === 'ios' ? 50 : 20,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
+  },
+  networkTitle: {
+    fontSize: 16,
+    fontWeight: '700',
+  },
+  balanceWrapper: {
+    marginTop: 15,
+  },
+  balanceCoin: {
+    alignItems: 'center',
+  },
+  tokenHead: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  tokenLogo: {
+    marginRight: 10,
+  },
+  tokenIconName: {
+    fontSize: 18,
+    lineHeight: 24,
+    fontWeight: '500',
+    color: '#011B21',
+  },
+  tokenIconBalance: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  tokenIconBalanceText: {
+    fontSize: 12,
+    lineHeight: 18,
+    fontWeight: '400',
+    color: '#121212',
+  },
+
+  balanceItem: {
+    backgroundColor: 'white',
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginVertical: 7,
+    padding: 10,
+    borderRadius: 10,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  tokenName: {
+    fontSize: 16,
+    fontWeight: '700',
+  },
+  tokenSymbol: {
+    fontSize: 10,
+    fontWeight: '700',
+    color: '#6C757D',
+  },
+  tokenBalanceTitle: {
+    fontSize: 10,
+    color: '#6C757D',
+    fontWeight: '700',
+  },
+  tokenBalance: {
+    textAlign: 'right',
+    fontSize: 16,
+    lineHeight: 19,
+    fontWeight: '500',
+    color: '#212529',
+  },
+});

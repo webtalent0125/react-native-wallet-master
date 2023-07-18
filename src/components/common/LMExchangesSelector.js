@@ -1,0 +1,74 @@
+import React, { useEffect, useState } from 'react';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import LMSelectModal from './LMSelectModal';
+import LMSelect from './LMSelect';
+import { useDispatch, useSelector } from 'react-redux';
+import { Icon } from 'react-native-eva-icons';
+import LMLoading from './LMLoading';
+import LMIcon from './LMIcon';
+import { NetworkAction } from '../../module/persistent/network/NetworkAction';
+
+export default function LMExchangesSelector({ ...rest }) {
+  const exchanges = [
+    { name: 'Pangolin', displayName: 'Pangolin' },
+    { name: 'PenguinToken', displayName: 'PenguinToken' },
+    { name: 'Avalaunch', displayName: 'Avalaunch' },
+  ];
+  const [activeExchange, setActiveExchange] = useState({
+    name: 'Pangolin',
+    displayName: 'Pangolin',
+  });
+
+  useEffect(async () => {}, []);
+  return (
+    <>
+      <TouchableOpacity
+        style={styles.container}
+        onPress={() => {
+          LMSelectModal.show({
+            data: exchanges,
+            onPress: async (item) => {
+              LMLoading.show();
+              setActiveExchange(item);
+              LMLoading.hide();
+            },
+            key: 'name',
+            label: 'displayName',
+            selected: activeExchange,
+          });
+        }}
+      >
+        <Text numberOfLines={1} style={styles.text}>
+          {activeExchange.displayName}
+        </Text>
+        <Icon name="chevron-down" fill={'black'} width={25} height={25} />
+      </TouchableOpacity>
+    </>
+  );
+}
+const styles = StyleSheet.create({
+  container: {
+    alignItems: 'center',
+    flexDirection: 'row',
+    backgroundColor: '#F0F3FF',
+    padding: 15,
+    borderRadius: 4,
+  },
+  text: {
+    fontSize: 12,
+    marginLeft: 10,
+    maxWidth: 80,
+    marginRight: 'auto',
+  },
+  textInput: {
+    paddingLeft: 5,
+    width: '100%',
+    height: 50,
+    borderWidth: 0.5,
+    borderRadius: 5,
+    borderColor: '#d5d5d5',
+    backgroundColor: 'white',
+  },
+  label: { color: 'white', fontWeight: 'bold' },
+  error: { color: 'red', fontWeight: 'bold' },
+});
